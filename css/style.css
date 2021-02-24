@@ -1,0 +1,11 @@
+#heroslider .slider-abs{
+    position: absolute;
+    z-index: 1;
+}
+#heroslider .slider-abs img{
+    position: absolute;
+    z-index: 1;
+}
+#heroslider .slider-abs img.left{
+    transform: translateX(-100%);
+}
