@@ -9,3 +9,52 @@
 #heroslider .slider-abs img.left{
     transform: translateX(-100%);
 }
+ 
+/* styles for tiles and tile container */
+#main-container{
+   
+    margin-top:0px;
+}
+
+@media(min-width:768px){
+    #main-container{
+        margin-top:20px;
+        margin-left:20%;
+        margin-right:20%;
+    }
+    
+    .container-tiles{
+        margin-top:10px;
+        display:flex;
+        justify-content: center;
+
+    }
+}
+
+#main-container div{
+   
+    padding:10px;
+
+    border:1px solid #ccc;
+}
+/* flex ratio 2:1 left-tile : right-tile respectively */
+.left-tile{
+    flex:2; 
+
+    min-height:200px;
+}
+.right-tile{
+    flex:1;
+
+    min-height: 200px;
+}
+
+.tile-content{
+
+    margin-top:30px;
+}
+
+.tile-head{
+    display:flex;
+    justify-content: center;
+}
