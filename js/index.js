@@ -142,6 +142,12 @@ class HeroSlider{
         abs.style.height=dummy.offsetHeight+"px";
         setInterval(()=>{this.autochange(this)},interval*1000);
     }
+    resize(){
+        var dummy=this.element.children[0].children[1];
+        var abs=this.element.children[0].children[0];
+        abs.style.width=dummy.offsetWidth+"px";
+        abs.style.height=dummy.offsetHeight+"px";
+    }
     autochange(sli){
         if(sli.cur==0 || sli.cur==heroslider.imgdivs.length-1)
             sli.directionleft=!sli.directionleft;
@@ -154,5 +160,5 @@ Debugger.log("Header Instantiated",153);
 var heroslider=new HeroSlider("heroslider",["images/favicon.jpg","images/favicon.jpg","images/favicon.jpg"]);
 heroslider.init();
 window.onresize=()=>{
-    heroslider.init();
+    heroslider.resize();
 }
