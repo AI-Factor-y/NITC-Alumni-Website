@@ -158,7 +158,11 @@ var Debugger=new Debug("index.js","debug");
 var header=new Header("header");
 Debugger.log("Header Instantiated",153);
 var heroslider=new HeroSlider("heroslider",["images/favicon.jpg","images/favicon.jpg","images/favicon.jpg"]);
+
+
+
 heroslider.init();
 window.onresize=()=>{
     heroslider.resize();
 }
+
