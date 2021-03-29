@@ -248,11 +248,64 @@ class content_slider{
 //-----------------------------
 
 var image_arr_1=[
-  ` <img src="/images/img_6.jpg" alt="" />`,
-  ` <img src="/images/img_7.jpg" alt="" />`,
-  ` <img src="/images/img_8.jpg" alt="" />`,
-  ` <img src="/images/img_9.jpg" alt="" />`,
-  ` <img src="/images/img_10.jpg" alt="" />`,
+  `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+    <div>
+      Mr. V. A. Thomas, Deputy Director (Retired), ISRO Satellite Centre, Bangalore<br><br>
+      Bsc.Engg. Mechanical - 1967<br><br>
+      Topic: “My Past and Your Future”
+    </div>
+  </div>
+   `,
+   `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+     <div>
+     <center>
+      Dr. Kallol Roy, Chairman and MD of Bhavini (A Govt. of India Enterprise under Dept. of Atomic Energy)<br><br>
+      B.Tech Electrical and Electronics Engineering - 1984<br><br>
+      Topic: “Opportunities and Challenges of the Engineering Profession”     
+     </center>
+     </div>
+   </div>
+    `,
+    `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+      <div>
+        <center>
+          Mr.Alok Ranjan Tripathy, Senior Director in IT sales in Infosys, UK<br><br>
+          B.Tech in Electrical and Electronics Engineering – 1994<br><br>
+          Topic: “Are You Born to Lead”
+        </center>
+      </div>
+    </div>
+     `,
+     `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+       <div>
+        <center>
+          Air Commodore T.T.Job, Indian Air Force<br><br>
+          BSc.Engg. Mechanical – 1967<br><br>
+          Topic: “How the Brain is Similar to a Computer”
+        </center>
+       </div>
+     </div>
+      `,
+      `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+        <div>
+          <center>
+            Dr. Tomy Sebastian, Director; Motor Drive Systems, Halla Mechatronics, Bay City, Michigan, United States<br><br>
+            B.Tech Electrical Engineering - 1978<br><br>
+            Topic: “State of the Art in Electric/Autonomous Vehicles”     
+          </center>   
+        </div>
+      </div>
+       `,
+       `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+         <div>
+          <center>
+            Mr. P M Sugathan, Rtd. Additional General Manager (Operation Services), NTPC, Noida<br><br>
+            B.Tech Mechanical Engineering in 1984.<br><br>
+            Topic: “Thermal Power Plants: State of the Art and Future”
+          </center>
+         </div>
+       </div>
+        `
 
 ];
 

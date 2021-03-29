@@ -154,12 +154,44 @@ class HeroSlider{
         sli.change(sli.directionleft);
     }
 }
+
+class Nexter{
+    constructor(nexterid,_call=false){
+        this.element=document.getElementById(nexterid);
+        this.eles=this.element.children;
+        for(var i=1;i<this.eles.length;i++){
+            this.eles[i].style.transform="translateX(100%)";
+        }
+        this.curpos=0;
+        this.call=_call;
+    }
+    async next(pre=false){
+        if(pre) 
+            this.curpos--;
+        else
+            this.curpos++;
+        if(this.curpos<0)this.curpos=0;
+        if(this.curpos>this.eles.length-1)this.curpos=this.eles.length-1;
+        for(var i=0;i<this.eles.length;i++){
+            var tran=0;
+            if(this.curpos<i)
+                tran=100;
+            if(this.curpos>i)
+                tran=-100;
+            this.eles[i].style.transform=`translateX(${tran}%)`;
+        }
+        if(this.call)
+            this.call(this.curpos);
+            return new Promise(res=>setTimeout(res,500));
+    }
+}
+
 var Debugger=new Debug("index.js","debug");
 var header=new Header("header");
 Debugger.log("Header Instantiated",153);
 var heroslider=new HeroSlider("heroslider",["images/favicon.jpg","images/favicon.jpg","images/favicon.jpg"]);
 
-
+var MainNexter=new Nexter("MainNexter");
 
 heroslider.init();
 window.onresize=()=>{
