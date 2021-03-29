@@ -77,6 +77,19 @@
     margin-right: auto;
   }
   
+.readm{
+    padding : 10%;
+}
+.readm .btn,.tran2-btn{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    width: fit-content;
+    cursor: pointer;
+}
+.readm h2{
+    padding: 20px;
+}
 
 
 

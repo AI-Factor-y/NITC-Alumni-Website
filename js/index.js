@@ -197,4 +197,3 @@ heroslider.init();
 window.onresize=()=>{
     heroslider.resize();
 }
-
