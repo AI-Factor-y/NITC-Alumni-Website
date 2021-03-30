@@ -240,6 +240,10 @@ class content_slider{
 
   }
 
+  kill_all_intervals(){
+    clearInterval(this.auto_slide);
+
+  }
 
 }
 
@@ -452,10 +456,28 @@ var dat_ar_i=[
 //--------
 // content_slider(id_name,html_array,auto_slide_interval_sec)
 
+var instantiation_dict={};
+
 var c_slider_1=new content_slider('wrapper',image_arr_1,3);
-
-
 
 var c_slider_2=new content_slider('wrapper-2',dat_ar,4);
 var c_slider_3=new content_slider('wrapper-3',dat_ar_i,3.5);
 var c_slider_4=new content_slider('wrapper-4',image_arr_2,2.5);
+
+function instantiate_class(id_name){
+    // create a new slider and store it in a dictionary
+    console.log("instantiating");
+    instantiation_dict[id_name]=new content_slider(id_name,image_arr_2,2.5); 
+
+}
+
+function kill_all_view_intervals(id_name){
+
+  if(id_name!=null){
+    console.log("killing");
+    var slider=instantiation_dict[id_name];
+    slider.kill_all_intervals();
+    delete slider;  // destroy the slider of current view
+  }
+
+}

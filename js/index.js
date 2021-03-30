@@ -165,7 +165,10 @@ class Nexter{
         this.curpos=0;
         this.call=_call;
     }
-    async next(pre=false){
+    async next(pre=false,content_slider_id=null){
+        // kill all the intervals in current view while switching
+        kill_all_view_intervals(content_slider_id);
+
         if(pre) 
             this.curpos--;
         else
@@ -277,8 +280,14 @@ function Inject(val){
         </ul>
         </p>
         <h3><u>Mentee Feedback</u></h3>
-        <div class="tran2-btn" onclick="MainNexter.next(true)">Back to Home</div>
+        <div class="postion-slider">
+            <div id="wrapper-5"></div>
+        </div>
+       
+        <div class="tran2-btn" onclick="MainNexter.next(true,'wrapper-5')">Back to Home</div>
         `;
+        
+        instantiate_class("wrapper-5");
     }
     MainNexter.next();
 }
