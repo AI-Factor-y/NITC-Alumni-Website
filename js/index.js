@@ -277,11 +277,8 @@ function Inject(val){
         </ul>
         </p>
         <h3><u>Mentee Feedback</u></h3>
-        <div id="wrapper-nitcamp"></div>
         <div class="tran2-btn" onclick="MainNexter.next(true)">Back to Home</div>
-        
         `;
-        //Init Slider Here
     }
     MainNexter.next();
 }
