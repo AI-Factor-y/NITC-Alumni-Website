@@ -318,6 +318,135 @@ var image_arr_2=[
 
 ];
 
+var dat_ar=[
+  `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+    <div>
+     <center>
+     1.     Prof. A. O. Kunjipaulo<br><br>
+     2.     Class of 1992 Computer Engineering Alumni<br><br>
+     3.     RECCAA, Singapore<br><br>
+     4.     RECCAA, USA<br><br>
+     5.     RECCAA, Bahrain<br><br>
+     6.     REC 1st Batch<br><br>
+     7.     RECCAA, Mumbai<br><br>    
+     </center>
+    </div>
+  </div>`,
+  `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+    <div>
+     <center>
+
+     8.     CSAI (Class of 2000) <br><br>
+     9.     REC 76 – 81 Batch<br><br>
+     10.  10 years of XXXII Batch (CREC 96)<br><br> 
+     11.  REC Calicut 1982 Batch<br><br>
+     12.  NITC (REC) 1983 Batch<br><br>
+     13.  REC Calicut, Class of ’84<br><br>
+     14.  CREC 80-85 Batch    <br><br>
+     </center>
+    </div>
+  </div>`,
+  `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+    <div>
+     <center>
+     15.  Padmanabhan in Memory of All Departed Souls of 77 Batch, CREC<br><br>
+     16.  Capt. Mohammed Memorial Endowment<br><br>
+     17.  Nitin Sharma Memorial Endowment<br><br>
+     18.  1997-2001 CSE B.Tech. Batch <br><br>
+     20.  Joseephus MT, John Sebastian & Luthufi K T  Memorial  2004-08 Batch <br><br>
+     21.  1984-88 Batch of CREC/NITC    <br><br>
+     </center>
+    </div>
+  </div>`,
+  `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+    <div>
+     <center>
+     22.  Sainadhan M.S (1983-87 Batch) Memorial Endowment<br><br>
+     23.  1986-90 Batch of CREC/NITC<br><br>
+     24.  1987-1991 Batch of CREC/NITC<br><br>
+     25.  1971 CREC batch<br><br>
+     26.  1988-1992 Batch of CREC/NITC<br><br> 
+     27.  1989-1993 Batch of CREC/NITC <br><br>
+     28.  Deepak Venugopal Memorial      <br><br>
+     </center>
+    </div>
+  </div>`,
+
+]
+
+var dat_ar_i=[
+  `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+    <div>
+      University of Toledo, USA
+    </div>
+  </div>
+   `,
+   `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+     <div>
+     <center>
+      Missouri State University, USA 
+     </center>
+     </div>
+   </div>
+    `,
+    `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+      <div>
+        <center>
+          National University of Ireland
+        </center>
+      </div>
+    </div>
+     `,
+     `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+       <div>
+         <center>
+           University College Cork, Cork, Ireland
+         </center>
+       </div>
+     </div>
+      `,
+     `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+       <div>
+        <center>
+          University of Shanghai for Science and Technology Shanghai, China
+        </center>
+       </div>
+     </div>
+      `,
+      `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+        <div>
+         <center>
+          School of Energy and Power Engineering, Shanghai, China
+         </center>
+        </div>
+      </div>
+       `,
+      `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+        <div>
+          <center>
+            University of Pitsberg, Mechanical Engineering and Materials Science Department    
+          </center>   
+        </div>
+      </div>
+       `,
+       `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+         <div>
+          <center>
+            Dong - A University, Nano-Thermal Laboratory Division of Mechanical Engineering
+          </center>
+         </div>
+       </div>
+        `,
+        `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
+          <div>
+           <center>
+            Michigan Technological University Houghton, Michigan U.S.A
+           </center>
+          </div>
+        </div>
+         `
+
+];
 
 // format
 //--------
@@ -327,6 +456,6 @@ var c_slider_1=new content_slider('wrapper',image_arr_1,3);
 
 
 
-var c_slider_2=new content_slider('wrapper-2',image_arr_2,4);
-var c_slider_3=new content_slider('wrapper-3',image_arr_1,3.5);
+var c_slider_2=new content_slider('wrapper-2',dat_ar,4);
+var c_slider_3=new content_slider('wrapper-3',dat_ar_i,3.5);
 var c_slider_4=new content_slider('wrapper-4',image_arr_2,2.5);

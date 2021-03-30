@@ -11,13 +11,13 @@
 }
  
 /* styles for tiles and tile container */
-#main-container{
+.main-container{
    
     margin-top:0px;
 }
 
 @media(min-width:768px){
-    #main-container{
+    .main-container{
         margin-top:20px;
         margin-left:20%;
         margin-right:20%;
@@ -34,7 +34,7 @@
     
 }
 
-#main-container div{
+.main-container div{
    
     /* padding:10px; */
 
@@ -78,7 +78,7 @@
   }
   
 .readm{
-    padding : 10%;
+    padding : 2% 15%;
 }
 .readm .btn,.tran2-btn{
     padding: 10px;
@@ -91,5 +91,9 @@
     padding: 20px;
 }
 
+::-webkit-scrollbar{
+    width: 2px;
+    background: transparent;
+}
 
 
