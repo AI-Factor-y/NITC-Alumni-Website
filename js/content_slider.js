@@ -464,10 +464,10 @@ var c_slider_2=new content_slider('wrapper-2',dat_ar,4);
 var c_slider_3=new content_slider('wrapper-3',dat_ar_i,3.5);
 var c_slider_4=new content_slider('wrapper-4',image_arr_2,2.5);
 
-function instantiate_class(id_name){
+function instantiate_class(id_name,array,sec=3){
     // create a new slider and store it in a dictionary
     console.log("instantiating");
-    instantiation_dict[id_name]=new content_slider(id_name,image_arr_2,2.5); 
+    instantiation_dict[id_name]=new content_slider(id_name,array,sec); 
 
 }
 
