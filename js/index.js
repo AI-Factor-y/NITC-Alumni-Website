@@ -1,9 +1,8 @@
 class Header{
     constructor(headerid){
         this.element=document.getElementById(headerid);
-        this.element.style.transition="all 0.5s";
         this.scrollY=window.scrollY;
-        this.element.style.position="fixed";
+        this.element.style.position="relative";
         this.element.style.top="0px";
         this.eles=document.getElementsByClassName("mainele");
         this.trace=[];
@@ -13,33 +12,28 @@ class Header{
         }
         console.log(this.trace);
         window.onscroll=this.onscroll;
-        var body=document.body;
-        this.height=this.element.offsetHeight;
-        if(body.style.marginTop<this.height){
-            body.style.marginTop=(body.style.marginTop+this.height)+"px";
-        }
     }
     onscroll(){
         var tran=0;
 
         if(window.scrollY>header.scrollY){
-            tran=-100;
+            tran='0vh';
         }
         else{
-            tran=0;
+            tran='10vh';
         }
-        header.element.style.transform=`translateY(${tran}%)`;
+        header.element.style.maxHeight=tran;
         header.scrollY=window.scrollY;
     }
     checkscroll(){
         for(var i=0;i<header.eles.length;i++){
             if(header.trace[i]!=header.eles[i].scrollTop){
                 console.log("changed "+i);
-                var tran=-100;
+                var tran='0px';
                 if(header.trace[i]>header.eles[i].scrollTop){
-                    tran=0;
+                    tran='10vh';
                 }
-                header.element.style.transform=`translateY(${tran}%)`;
+                header.element.style.maxHeight=tran;
                 header.scrollY=window.scrollY;
                 header.trace[i]=header.eles[i].scrollTop;
             }
