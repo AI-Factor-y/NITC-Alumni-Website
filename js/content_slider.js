@@ -105,10 +105,10 @@ class content_slider{
     var style=`
       <style>
       .${this.container_class_name}{
-        height: 500px;
+        height: fit-content;
+        margin: 8% 0%;
         transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
         position: relative;
-      
       }
       
       .${this.slideImage_name}{
@@ -117,6 +117,12 @@ class content_slider{
         position: absolute;
       }
       
+      .${this.slideImage_name+"dummy"}{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        opacity : 0;
+      }
       .${this.slideImage_name} img{
         width: 100%;
         height: 100%;
@@ -193,6 +199,14 @@ class content_slider{
       
       `
     }
+    image_data+=`
+
+        <div class="${this.slideImage_name+"dummy"}">
+
+          ${this.image_arr[0]}
+
+        </div>
+      `;
 
     this.wrap_elem.innerHTML=`
       <div class="${this.prev_but_name}"><i class="fas fa-chevron-left"></i></div>
