@@ -424,5 +424,8 @@ function Inject(val){
         ];
         instantiate_class("wrapper-5",array,7);
     }
+    header.element.style.transform=`translateY(0%)`;
     MainNexter.next();
+    document.body.scrollTop=0;
+    MainNexter.eles[1].scrollTop=0;
 }
