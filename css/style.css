@@ -13,12 +13,18 @@
 /* styles for tiles and tile container */
 .main-container{
    
-    margin-top:0px;
+    margin-top:0px;    
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWAQORt6BEig5MjwewdnwTGB6J9vkhPpw0KA&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffffaf;
+    background-blend-mode: color;
+    background-position: center;
 }
 
 @media(min-width:768px){
     .main-container{
-        margin-top:20px;
+        padding-top:20px;
     }
     
     .container-tiles{
