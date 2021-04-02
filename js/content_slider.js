@@ -34,10 +34,10 @@ class content_slider{
     this.currentSlide = 0;
 
     this.auto_slide=null;
-    var _left=-0.25;
+    var _left=-0.5;
     this.slideImage.forEach((img, i) => {
       img.style.left = _left + "%";
-      _left+=99.875;
+      _left+=100-(1/this.slideImage.length);
     });
     this.slideImage[0].classList.add("active");
   
