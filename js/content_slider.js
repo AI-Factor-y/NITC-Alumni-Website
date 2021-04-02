@@ -114,7 +114,7 @@ class content_slider{
         width: 80%;
         position: absolute;
         background: rgba( 255, 255, 255, 0.15 );
-        box-shadow: 0 4px 16px 0 rgba( 31, 38, 135, 0.37 );
+        box-shadow: 0 4px 16px 0 rgba( 31, 38, 135, 0.37 ),inset 0 0 2000px rgba(255, 255, 255, .5);
         backdrop-filter: blur( 9.5px );
         -webkit-backdrop-filter: blur( 9.5px );
         border-radius: 10px;

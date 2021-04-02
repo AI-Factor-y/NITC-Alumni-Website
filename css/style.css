@@ -19,12 +19,11 @@
 @media(min-width:768px){
     .main-container{
         margin-top:20px;
-        margin-left:10%;
-        margin-right:10%;
     }
     
     .container-tiles{
-        margin-top:10px;
+        padding: 0% 10%;
+        padding-top:20px;
         display:flex;
         justify-content: center;
 
