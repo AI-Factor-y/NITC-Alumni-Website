@@ -111,3 +111,10 @@
     }
     
 }
+._injecthere_{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #ffffffaf;
+    background-blend-mode: color;
+}

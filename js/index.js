@@ -218,6 +218,7 @@ window.onresize=()=>{
 }
 function Inject(val){
     var injectdiv=document.getElementById("_injecthere_");
+    var url="";
     if(val=='about'){
         injectdiv.innerHTML=`
         
@@ -241,7 +242,7 @@ function Inject(val){
     }
     if(val=='msg'){
         injectdiv.innerHTML=`
-
+        <div style="padding:10px;">
         <h2>Message from the Director</h2><br>
         <p>
         <br><br>
@@ -262,8 +263,9 @@ function Inject(val){
         Sivaji Chakravorti
         </p><br>
         <div class="tran2-btn" onclick="MainNexter.next(true)">Back to Home</div>
-
+        </div>
         `;
+        url="https://i.pinimg.com/originals/b3/a7/df/b3a7dfe9220305b0328022ebc1a7361a.jpg";
     }
     if(val=='nitcamp'){
         injectdiv.innerHTML=`
@@ -422,4 +424,6 @@ function Inject(val){
     MainNexter.next();
     document.body.scrollTop=0;
     MainNexter.eles[1].scrollTop=0;
+    console.log(injectdiv,injectdiv.parentElement);
+    injectdiv.parentElement.style.backgroundImage="url("+url+")";
 }
