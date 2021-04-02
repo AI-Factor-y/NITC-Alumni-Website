@@ -6,7 +6,7 @@
 
 class content_slider{
 
-  constructor(wrapper_id,image_arr,auto_interval_t){
+  constructor(wrapper_id,image_arr,auto_interval_t,dummyindex=0){
 
     this.wrap_elem=document.querySelector(`#${wrapper_id}`);
 
@@ -21,7 +21,7 @@ class content_slider{
     this.image_arr=image_arr // array for storing all images
     this.auto_interval_time=auto_interval_t
 
-    this.init_injection();
+    this.init_injection(dummyindex);
     
     this.slideImage = document.querySelectorAll(`.${this.slideImage_name}`);
     this.slidesContainer = document.querySelector(`.${this.container_class_name}`);
@@ -34,11 +34,11 @@ class content_slider{
     this.currentSlide = 0;
 
     this.auto_slide=null;
-    
+    var _left=-0.25;
     this.slideImage.forEach((img, i) => {
-      img.style.left = i * 100 + "%";
+      img.style.left = _left + "%";
+      _left+=99.875;
     });
-  
     this.slideImage[0].classList.add("active");
   
     this.createNavigationDots();
@@ -100,28 +100,43 @@ class content_slider{
 
 
 
-  init_injection(){
+  init_injection(dummyindex){
 
     var style=`
       <style>
       .${this.container_class_name}{
-        height: fit-content;
+        height: max-content;
         margin: 8% 0%;
         transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
         position: relative;
       }
       
       .${this.slideImage_name}{
-        height: 100%;
-        width: 100%;
+        margin:10%;
+        height: 80%;
+        width: 80%;
         position: absolute;
+        background: rgba( 255, 255, 255, 0.15 );
+        box-shadow: 0 4px 16px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 9.5px );
+        -webkit-backdrop-filter: blur( 9.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.28 );
       }
       
       .${this.slideImage_name+"dummy"}{
-        height: 100%;
-        width: 100%;
+        margin:10%;
+        height: 80%;
+        width: 80%;
         position: relative;
+        background: rgba( 255, 255, 255, 0.15 );
+        box-shadow: 0 4px 16px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 9.5px );
+        -webkit-backdrop-filter: blur( 9.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
         opacity : 0;
+        padding : 10%;
       }
       .${this.slideImage_name} img{
         width: 100%;
@@ -203,7 +218,7 @@ class content_slider{
 
         <div class="${this.slideImage_name+"dummy"}">
 
-          ${this.image_arr[0]}
+          ${this.image_arr[dummyindex]}
 
         </div>
       `;
@@ -226,8 +241,8 @@ class content_slider{
  goToSlide(slideNumber) {
 
     this.slidesContainer.style.transform =
-      "translateX(-" + (this.slideWidth * slideNumber) + "px)";
-  
+      "translateX(-" + (this.slideWidth * slideNumber * 10)/8 + "px)";
+      
     this.currentSlide = slideNumber;
   
     this.setActiveClass();
@@ -267,7 +282,7 @@ class content_slider{
 
 var image_arr_1=[
   `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
-    <div>
+    <div style="padding:20px;">
       Mr. V. A. Thomas, Deputy Director (Retired), ISRO Satellite Centre, Bangalore<br><br>
       Bsc.Engg. Mechanical - 1967<br><br>
       Topic: “My Past and Your Future”
@@ -275,7 +290,7 @@ var image_arr_1=[
   </div>
    `,
    `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
-     <div>
+     <div style="padding:20px;">
      <center>
       Dr. Kallol Roy, Chairman and MD of Bhavini (A Govt. of India Enterprise under Dept. of Atomic Energy)<br><br>
       B.Tech Electrical and Electronics Engineering - 1984<br><br>
@@ -285,7 +300,7 @@ var image_arr_1=[
    </div>
     `,
     `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
-      <div>
+      <div style="padding:20px;">
         <center>
           Mr.Alok Ranjan Tripathy, Senior Director in IT sales in Infosys, UK<br><br>
           B.Tech in Electrical and Electronics Engineering – 1994<br><br>
@@ -295,7 +310,7 @@ var image_arr_1=[
     </div>
      `,
      `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
-       <div>
+       <div style="padding:20px;">
         <center>
           Air Commodore T.T.Job, Indian Air Force<br><br>
           BSc.Engg. Mechanical – 1967<br><br>
@@ -305,7 +320,7 @@ var image_arr_1=[
      </div>
       `,
       `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
-        <div>
+        <div style="padding:20px;">
           <center>
             Dr. Tomy Sebastian, Director; Motor Drive Systems, Halla Mechatronics, Bay City, Michigan, United States<br><br>
             B.Tech Electrical Engineering - 1978<br><br>
@@ -315,7 +330,7 @@ var image_arr_1=[
       </div>
        `,
        `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
-         <div>
+         <div style="padding:20px;">
           <center>
             Mr. P M Sugathan, Rtd. Additional General Manager (Operation Services), NTPC, Noida<br><br>
             B.Tech Mechanical Engineering in 1984.<br><br>
@@ -338,7 +353,7 @@ var image_arr_2=[
 
 var dat_ar=[
   `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
-    <div>
+    <div style="padding:30px;">
      <center>
      1.     Prof. A. O. Kunjipaulo<br><br>
      2.     Class of 1992 Computer Engineering Alumni<br><br>
@@ -351,7 +366,7 @@ var dat_ar=[
     </div>
   </div>`,
   `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
-    <div>
+    <div style="padding:30px;">
      <center>
 
      8.     CSAI (Class of 2000) <br><br>
@@ -365,7 +380,7 @@ var dat_ar=[
     </div>
   </div>`,
   `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
-    <div>
+    <div style="padding:30px;">
      <center>
      15.  Padmanabhan in Memory of All Departed Souls of 77 Batch, CREC<br><br>
      16.  Capt. Mohammed Memorial Endowment<br><br>
@@ -377,7 +392,7 @@ var dat_ar=[
     </div>
   </div>`,
   `<div style="height:100%;width:100%;align-items:center;justify-content:center;display:flex;">
-    <div>
+    <div style="padding:30px;">
      <center>
      22.  Sainadhan M.S (1983-87 Batch) Memorial Endowment<br><br>
      23.  1986-90 Batch of CREC/NITC<br><br>
@@ -472,10 +487,10 @@ var dat_ar_i=[
 
 var instantiation_dict={};
 
-var c_slider_1=new content_slider('wrapper',image_arr_1,3);
+var c_slider_1=new content_slider('wrapper',image_arr_1,3,1);
 
-var c_slider_2=new content_slider('wrapper-2',dat_ar,4);
-var c_slider_3=new content_slider('wrapper-3',dat_ar_i,3.5);
+var c_slider_2=new content_slider('wrapper-2',dat_ar,4,2);
+var c_slider_3=new content_slider('wrapper-3',dat_ar_i,3.5,6);
 //var c_slider_4=new content_slider('wrapper-4',image_arr_2,2.5);
 
 function instantiate_class(id_name,array,sec=3){
