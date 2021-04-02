@@ -426,7 +426,7 @@ function Inject(val){
               </div>
                 `
         ];
-        instantiate_class("wrapper-5",array,7);
+        instantiate_class("wrapper-5",array,7,3);
     }
     header.element.style.transform=`translateY(0%)`;
     MainNexter.next();
