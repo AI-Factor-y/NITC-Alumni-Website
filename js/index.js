@@ -431,6 +431,6 @@ function Inject(val){
     header.element.style.transform=`translateY(0%)`;
     MainNexter.next();
     document.body.scrollTop=0;
-    injectdiv.scrollTop=0;
+    injectdiv.scrollTop=1;
     document.getElementById("_injecimgthere_").style.backgroundImage="url("+url+")";
 }
