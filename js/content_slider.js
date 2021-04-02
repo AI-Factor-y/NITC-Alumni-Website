@@ -34,10 +34,8 @@ class content_slider{
     this.currentSlide = 0;
 
     this.auto_slide=null;
-    var _left=-0.5;
     this.slideImage.forEach((img, i) => {
-      img.style.left = _left + "%";
-      _left+=100-(1/this.slideImage.length);
+      img.style.left = i*100 + "%";
     });
     this.slideImage[0].classList.add("active");
   
@@ -106,7 +104,6 @@ class content_slider{
       <style>
       .${this.container_class_name}{
         height: max-content;
-        margin: 8% 0%;
         transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
         position: relative;
       }
@@ -128,6 +125,7 @@ class content_slider{
         margin:10%;
         height: 80%;
         width: 80%;
+        margin-top:0%;
         position: relative;
         background: rgba( 255, 255, 255, 0.15 );
         box-shadow: 0 4px 16px 0 rgba( 31, 38, 135, 0.37 );
@@ -266,7 +264,6 @@ class content_slider{
 
   resize(){
     this.slideWidth = this.slideImage[0].clientWidth;
-
   }
 
   kill_all_intervals(){
